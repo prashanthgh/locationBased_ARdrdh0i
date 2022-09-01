@@ -18,6 +18,7 @@ function loadPlaces(position) {
         &client_secret=${params.clientSecret}
         &limit=30 
         &v=${params.version}';
+    console.log(endpoint)
     return fetch(endpoint)
         .then((res) => {
             return res.json()
