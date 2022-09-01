@@ -14,12 +14,8 @@
             loading-screen="enabled: false;"
             arjs="sourceType: webcam; debugUIEnabled: false;"
         >
-                <a-image
-                    src="assets/asset.jpeg"
-                    look-at="[gps-camera]"
-                    scale="1 1 1"
-                    gps-entity-place="latitude: 14.9046792; longitude: 76.3874222;"
-                ></a-image>
+
+            <a-entity gps-entity-place="latitude: 14.9046792; longitude: 76.3874222;" gltf-model="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf" rotation="0 180 0" animation-mixer scale="0.15 0.15 0.15"/>
 
             <a-camera gps-camera rotation-reader></a-camera>
         </a-scene>
