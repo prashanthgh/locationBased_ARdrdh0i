@@ -1975,8 +1975,10 @@ window.onload = () => {
         // loadPlaces(position.coords)
         //     .then((places) => {
                 places.forEach((place) => {
-                    const latitude = place.location.lat;
-                    const longitude = place.location.lng;
+                    // const latitude = place.location.lat;
+                    // const longitude = place.location.lng;
+                    const latitude = 14.9046792;
+                    const longitude = 76.3874222;
 
                     // add place name
                     const placeText = document.createElement('a-link');
