@@ -1083,7 +1083,7 @@
   ],
   "images": [
     {
-      "uri": "textures/blinn2_baseColor.png"
+      "uri": "blinn2_baseColor.png"
     }
   ],
   "materials": [
