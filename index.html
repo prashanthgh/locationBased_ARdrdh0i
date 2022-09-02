@@ -15,9 +15,11 @@
             arjs="sourceType: webcam; debugUIEnabled: false;"
         >
 
-            <a-entity gps-entity-place="latitude: 14.9046792; longitude: 76.3874222;" gltf-model="https://raw.githubusercontent.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf" rotation="0 180 0" animation-mixer scale="0.15 0.15 0.15"/>
+            
 
-            <a-camera gps-camera rotation-reader></a-camera>
+            <a-camera gps-camera rotation-reader>
+                <a-entity gps-entity-place="latitude: 14.9046792; longitude: 76.3874222;" gltf-model="https://raw.githubusercontent.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf" rotation="0 180 0" animation-mixer scale="0.15 0.15 0.15"/>
+            </a-camera>
         </a-scene>
     </body>
 </html>
