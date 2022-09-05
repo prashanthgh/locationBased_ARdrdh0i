@@ -30,23 +30,11 @@ function renderPlaces(places) {
         model.setAttribute('rotation', '0 180 0');
         model.setAttribute('animation-mixer', '');
         model.setAttribute('scale', '0.5 0.5 0.5');
-         
-         let model2 = document.createElement('a-image');
-        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-        model.setAttribute('src', 'https://www.slashgear.com/wp-content/uploads/2012/05/CityLensCameraView_final.jpg');
-        model.setAttribute('rotation', '-90 0');
-        model.setAttribute('width', '5');
-        model.setAttribute('height', '5');
 
         model.addEventListener('loaded', () => {
             window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
         });
-         
-         model2.addEventListener('loaded', () => {
-            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-        });
 
         scene.appendChild(model);
-        scene.appendChild(model2);
     });
 }
