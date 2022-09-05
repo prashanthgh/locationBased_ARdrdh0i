@@ -29,7 +29,7 @@ function renderPlaces(places) {
         model.setAttribute('gltf-model', 'https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf');
         model.setAttribute('rotation', '0 180 0');
         model.setAttribute('animation-mixer', '');
-        model.setAttribute('scale', '0.5 0.5 0.5');
+        model.setAttribute('scale', '100 100 100');
          model.setAttribute('position', '0 0 0');
 
         model.addEventListener('loaded', () => {
