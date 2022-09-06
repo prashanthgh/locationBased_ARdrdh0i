@@ -15,14 +15,16 @@
             arjs="sourceType: webcam; debugUIEnabled: false;"
         >
 
-            <a-assets>
-    <img id="ground" src="https://www.yieldify.com/wp-content/uploads/2020/06/kardiel-product-detail-page-1070x1024.jpg" crossorigin="anonymous">
-  </a-assets>
+           <a-entity position="0 1.6 -2" 
+            geometry="primitive: plane; height: 1; width: 1" 
+            material="shader: flat; src: https://www.sellerapp.com/blog/wp-content/uploads/2017/01/lisiting.png"  
+            event-set__mouseenter="scale: 1.2 1.2 1" 
+            event-set__mouseleave="scale: 1 1 1" 
+            proxy-event="event: click; to: #text-informations; as: switch">
 
 
 
-  <!-- Textured plane parallel to ground. -->
-  <a-plane src="#ground" height="100" width="100" rotation="-90 0 0"></a-plane>
+  
         </a-scene>
     </body>
 </html>
