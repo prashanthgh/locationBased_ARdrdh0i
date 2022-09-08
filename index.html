@@ -2,7 +2,7 @@
 <html>
     <head>
    <!-- Import the component -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <style>
     model-viewer {
   width: 800px;
@@ -14,7 +14,12 @@
 <!-- Use it like any other HTML element -->
 <body>
 <div style="height:100%;width:100%">
-    <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf" ar ar-modes="webxr scene-viewer quick-look"  shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+              ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
+              alt="A 3D model of an astronaut"
+              ar
+              auto-rotate
+              camera-controls></model-viewer>
 </div>
 </body>
 </html>
