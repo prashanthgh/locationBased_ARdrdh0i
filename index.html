@@ -1,63 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    </head>
-
-    <body style="margin: 0; overflow: hidden;">
-     <!--   <a-scene
-            vr-mode-ui='enabled: false' 
-        embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+        <!-- we use cors proxy to avoid cross-origin problems -->
+        <!--
+          ⚠️⚠️⚠️
+          https://arjs-cors-proxy.herokuapp.com/ is now offline, Heroku has dismissed all his free plans from November 2022.
+          You need to host your own proxy and use it instead. The proxy is based on CORS Anywhere (see https://github.com/Rob--W/cors-anywhere).
+          ⚠️⚠️⚠️
+        -->
+        <a-entity
+          position="-2 1 -5"
         >
+            <a-gltf-model position="0 -0.3 0.15" scale="0.065 0.065 0.065" src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"></a-gltf-model>
+    </a-entity>
+    <a-entity
+          position="0 1 -5"
+        >
+            <a-gltf-model position="0 -0.3 0.15" scale="0.065 0.065 0.065" src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"></a-gltf-model>
+    </a-entity>
+    <a-entity
+          position="2 1 -5"
+        >
+            <a-gltf-model position="0 -0.3 0.15" scale="0.065 0.065 0.065" src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"></a-gltf-model>
+    </a-entity>
 
-           <a-entity position="0 1.6 -2" 
-            >
-               <a-image src="assets/sunrise_prod.png"  scale="2 2 2"></a-image>
-            </a-entity>
-        </a-scene> -->
-         <a-scene
-         arjs='trackingMethod: best'
-        embedded>
-        <a-anchor hit-testing-enabled='true'>
-            <a-box position='0 0.5 0'> </a-box>
-         </a-anchor>
-         <a-camera-static></a-camera-static>
-        
-        </a-scene>
-        
-    </body>
-</html>
-
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>GeoAR.js demo</title>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> -->
-<!--     <script>
-        THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
-    </script> -->
- <!--   <script src="./script.js"></script>
-</head>
-
-<body style='margin: 0; overflow: hidden;'>
-    <a-scene 
-        vr-mode-ui='enabled: false' 
-        embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-    <a-camera id='camera1' look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1'  rotation-reader></a-camera>
-    <a-image src="https://cdn.glitch.global/2beb76c3-dfc5-4d18-9752-67e82b56f662/CityLensCameraView_final.jpg" gps-entity-place="latitude: 14.9074626; longitude: 76.385495; look-at="[gps-camera]" scale="2 2 2"></a-image>
-</a-scene>
-
-</body>
-</html> -->
-
+      
+    </a-scene>
+  </body>
+</html> 
